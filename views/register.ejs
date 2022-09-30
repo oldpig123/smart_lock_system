@@ -1,0 +1,43 @@
+<h1>Add new user</h1>
+<%- include ('./partials/messages') %>
+<form action="/userop/newuser" method="POST">
+    <div>
+        <label for="name">Name</label>
+        <input 
+        type="name" 
+        name="name" 
+        placeholder="Enter name" 
+        value="<%= typeof name != 'undefined' ? name : '' %>"
+        />
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input 
+        type="password"
+        name="password"
+        placeholder=" Create Password"
+        value="<%= typeof password != 'undefined' ? password : '' %>"
+        />
+    </div>
+    <div>
+        <label for="password2">Confirm Password</label>
+        <input 
+        type="password"
+        name="password2"
+        placeholder="Confirm Password"
+        value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+        />
+    </div>
+    <div>
+        <label for="admin">Set as admin</label>
+        <input 
+        type="checkbox"
+        name="admin"
+        value="admin"
+        />
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Register</button>
+</form>
+<form action="/dashboard">
+    <input type="submit" value="Back to dashboard">
+</form>

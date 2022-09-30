@@ -1,0 +1,45 @@
+<h1>Dashboard</h1>
+<p>Welcome <%= user.name %>
+</p>
+
+<% if (user.admin){ %>
+    <form action="/userop/newuser">
+        <input type="submit" value ="Add new user">
+    </form>
+<% } %>
+
+<% if (user.admin){ %>
+    <form action="/userop/rm_user">
+        <input type="submit" value ="Remove a user">
+    </form>
+<% } %>
+
+<% if (user.admin){ %>
+    <form action="/userop/rst_user_secret">
+        <input type="submit" value ="Reset user mfa code">
+    </form>
+<% } %>
+
+<% if (!status){ %>
+<form action="/userop/unlock" method="post">
+    <input type="submit" value ="unlock">
+</form>
+<% } %>
+
+<% if (status){ %>
+<form action="/userop/lock" method="post">
+    <input type="submit" value ="lock">
+</form>
+<% } %>
+
+<form action="/userop/rst_secret" method="post">
+    <input type="submit" value ="Reset mfa code">
+</form>
+
+<form action="/userop/rst_password">
+    <input type="submit" value ="Reset password">
+</form>
+
+<form action="/users/logout">
+    <input type="submit" value ="Logout">
+</form>

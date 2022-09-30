@@ -1,0 +1,12 @@
+<h1>Setup MFA</h1>
+<form action="/users/register_mfa" method="POST">
+  <p>Scan the QR Code in the Authenticator app or enter the setup key below <br> 
+    in to Authenticator app then enter the code that you see in the app in the text field and click Submit.</p>
+  <p>setup key: <%= secret %></p>
+  <img src="<%= qr %>" class="img-fluid" />
+  <div class="mb-3">
+    <label for="code" class="form-label">Code</label>
+    <input type="text" class="form-control" id="code" name="code">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

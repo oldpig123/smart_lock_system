@@ -1,0 +1,17 @@
+<h1>Remove user</h1>
+
+<form action="/userop/rm_user" method="POST">
+    <div>
+        <label for="password">password</label>
+        <input type="password" name="password" placeholder="Enter password" />
+    </div>
+    <div>
+        <label for="name">User name to remove</label>
+        <input type="string" name="name" placeholder="Enter the user name" />
+    </div>
+    <%- include ('./partials/messages') %>
+        <button type="submit" class="btn btn-primary btn-lock">Remove</button>
+</form>
+<form action="/dashboard">
+    <input type="submit" value="Back to dashboard">
+</form>

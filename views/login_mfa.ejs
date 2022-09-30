@@ -1,0 +1,8 @@
+<h3>type the code in Authenticator here</h3>
+<form action="/users/login_mfa" method="post">
+    <div>
+        <input type="string" name="code">
+    </div>
+    <%- include ('./partials/messages') %>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
